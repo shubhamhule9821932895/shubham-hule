@@ -8,6 +8,7 @@
     />
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="aos.css">
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
@@ -24,6 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
+    
   </head>
   <body>
 
@@ -75,8 +77,14 @@
         </div>
       </div>
     </section>
+    <!--  ==================  back to top button   ============  -->
+    <div class="scrollTop" onclick="scrollToTop();">
+      <div class="container">
+        <img src="up.png" alt="" class="img-fluid">
+      </div>
+    </div>
     <!--  ===============   About Me Section    ==============   -->
-    <section id="about-me" style="margin-top: 10vh;">
+    <section id="about-me" style="margin-top: 10vh;" data-aos="fade-up">
       <div class="container">
         <div class="row">
           <div class="col-md-6 about-img">
@@ -122,8 +130,7 @@
 
 
     <section id="inner-skills">
-      <div class="container">
-        <h3>My Skills</h3>
+      <div class="container-fluid">
         <div class="collection">
           <div class="card content-box">
             <div class="card-header">
@@ -152,40 +159,40 @@
           </div>
           <div class="card content-box">
             <div class="card-header">
-              passions
+              Skills
             </div>
             <div class="card-body">
-              <table class="table-responsive tab">
+              <table class="table-responsive">
                 <tr>
                   <td>
-                    <i class="fas fa-book picons"></i>
-                    <p>learning &nbsp;</p>
+                    <i class="fab fa-html5 picons"></i>
+                    <p>HTML5 &nbsp;</p>
                   </td>
       
                   <td>
-                    <i class="fas fa-laptop-code picons"></i>
-                    <p>technology &nbsp;</p>
+                    <i class="fab fa-css3-alt picons"></i>
+                    <p>CSS3 &nbsp;</p>
                   </td>
       
                   <td>
-                    <i class="far fa-futbol picons"></i>
-                    <p>playing sports</p>
+                    <i class="fab fa-js-square picons"></i>
+                    <p>Javascript</p>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <i class="fas fa-book picons"></i>
-                    <p>learning &nbsp;</p>
+                    <i class="fab fa-bootstrap picons"></i>
+                    <p>Bootsrap4 &nbsp;</p>
                   </td>
       
                   <td>
-                    <i class="fas fa-laptop-code picons"></i>
-                    <p>technology &nbsp;</p>
+                    <i class="fab fa-js-square picons"></i>
+                    <p>jquery &nbsp;</p>
                   </td>
       
                   <td>
-                    <i class="far fa-futbol picons"></i>
-                    <p>playing sports</p>
+                    <i class="fab fa-github picons"></i>
+                    <p>github</p>
                   </td>
                 </tr>
               </table>                
@@ -221,11 +228,16 @@
     </section>
     
     <!--========================================       blogs carousel     =========================================-->
-
+    <section id="outer-blogs">
+      <div class="container">
+        <div class="blogs-header">
+          <h2>Blogs</h2>
+          <h6>Some Of My Works &amp; Thoughts </h6>
+        </div>
+      </div>
+    </section>
     <section id="blogs">
       <div class="container-fluid">
-        <h4>Blogs</h4>
-        <h6>Some Of My Works &amp; Thoughts </h6>
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide cardo card">
@@ -234,9 +246,11 @@
               </div>
               <div>
                 <p class="details-o">PYTHON PROJECTS IDEAS</p>
-                <button type="button" class="btn read-more-o">
-                  READ MORE <i class="fas fa-arrow-right"></i>
-                </button>
+                <a href="https://blog.nerdjfpb.com/project-ideas-for-python-beginners-to-expert/" target="blank">
+                  <button type="button" class="btn read-more-o">
+                    READ MORE <i class="fas fa-arrow-right"></i>
+                  </button>
+                </a>
               </div>
             </div>
             <div class="swiper-slide carde">
@@ -245,9 +259,11 @@
               </div>
               <div>
                 <p class="details-e">PYTHON PROJECTS IDEAS</p>
-                <button type="button" class="btn read-more-e">
-                  READ MORE <i class="fas fa-arrow-right"></i>
-                </button>
+                <a href="https://blog.nerdjfpb.com/project-ideas-for-vanilla-javascript-beginners-to-expert/" target="blank">
+                  <button type="button" class="btn read-more-e">
+                    READ MORE <i class="fas fa-arrow-right"></i>
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -257,9 +273,11 @@
               </div>
               <div>
                 <p class="details-o">PYTHON PROJECTS IDEAS</p>
-                <button type="button" class="btn read-more-o">
-                  READ MORE <i class="fas fa-arrow-right"></i>
-                </button>
+                <a href="https://blog.nerdjfpb.com/project-ideas-for-flutter-beginners-to-expert/" target="blank">
+                  <button type="button" class="btn read-more-o">
+                    READ MORE <i class="fas fa-arrow-right"></i>
+                  </button>
+                </a>
               </div>
             </div>
             <div class="swiper-slide carde">
@@ -375,7 +393,7 @@
               <img src="js project ideas.png" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="icofont-plus-circle"></i></a>
-                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+                <a href="#" title="More Details"><i class="fas fa-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>App 1</h4>
@@ -389,7 +407,7 @@
               <img src="js project ideas.png" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-plus-circle"></i></a>
-                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+                <a href="#" title="More Details"><i class="fas fa-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>Web 3</h4>
@@ -403,7 +421,7 @@
               <img src="js project ideas.png" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="icofont-plus-circle"></i></a>
-                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+                <a href="#" title="More Details"><i class="fas fa-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>App 2</h4>
@@ -417,7 +435,7 @@
               <img src="js project ideas.png" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="icofont-plus-circle"></i></a>
-                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+                <a href="#" title="More Details"><i class="fas fa-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>Card 2</h4>
@@ -431,7 +449,7 @@
               <img src="js project ideas.png" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="icofont-plus-circle"></i></a>
-                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+                <a href="#" title="More Details"><i class="fas fa-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>Web 2</h4>
@@ -445,7 +463,7 @@
               <img src="js project ideas.png" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="icofont-plus-circle"></i></a>
-                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+                <a href="#" title="More Details"><i class="fas fa-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>App 3</h4>
@@ -459,7 +477,7 @@
               <img src="js project ideas.png" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="icofont-plus-circle"></i></a>
-                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+                <a href="#" title="More Details"><i class="fas fa-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>Card 1</h4>
@@ -473,7 +491,7 @@
               <img src="js project ideas.png" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="js project ideas.png" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="icofont-plus-circle"></i></a>
-                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+                <a href="#" title="More Details"><i class="fas fa-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>Card 3</h4>
@@ -487,7 +505,7 @@
               <img src="js project ideas.png" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-plus-circle"></i></a>
-                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+                <a href="#" title="More Details"><i class="fas fa-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>Web 3</h4>
@@ -501,6 +519,86 @@
       </div>
     </section><!-- End Portfolio Section -->
 
+
+
+    <!--contact me section-->
+
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>Contact us the get started</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="fas fa-map-marker-alt"></i>
+                <h4>Location:</h4>
+                <p>1804 , Radha Chs , 
+                  RS Road , Malad (E) , Mumbai-4000097.</p>
+              </div>
+
+              <div class="email">
+                <i class="fas fa-envelope"></i>
+                <h4>Email:</h4>
+                <p>shubham.hule@spit.ac.in</p>
+              </div>
+
+              <div class="phone">
+                <i class="fas fa-phone-alt"></i>
+                <h4>Call:</h4>
+                <p>+91 9653251316</p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.3487097858906!2d72.85720831485293!3d19.17996588702836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b70b0e3dcb85%3A0x14a0f9fee91da742!2sRadha%20building!5e0!3m2!1sen!2sin!4v1595092330680!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Us Section -->
+
     
 
     <footer id="footer">
@@ -508,7 +606,7 @@
         <h6>&copy; 2020 Exclusive &nbsp;&nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;&nbsp;&nbsp;Design by Shubham HULE.  </h6>
       </div>
     </footer>
-    <!--contact me section-->
+    
 
 
 
@@ -527,8 +625,9 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="personalportfolio.js"></script>
+    <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="aos.js"></script>
     <script
       src="https://kit.fontawesome.com/f0932be404.js"
       crossorigin="anonymous"
@@ -538,7 +637,7 @@
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
   <script src="main.jquery.js"></script>
-
+  
   </body>
 </html>
 
