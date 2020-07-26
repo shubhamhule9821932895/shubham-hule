@@ -18,7 +18,7 @@ nav {
   min-height: 8vh;
   background-color: rgb(49, 49, 49);
   font-family: "Poppins", sans-serif;
-  box-shadow: 10px 10px 10px rgb(26, 17, 16);
+  box-shadow: 7px 7px 7px rgb(26, 17, 16);
 }
 
 .logo {
@@ -146,14 +146,12 @@ nav {
   height: 60px;
   border-radius: 50%;
   background-size: 40px;
-  background-position: center;
-  background-repeat: no-repeat;
   cursor: pointer;
-  z-index: 100000;
+  z-index: 10;
   visibility: hidden;
   opacity: 0;
   transition: 0.5s;
-  background: red url(https://image.flaticon.com/icons/svg/481/481155.svg);
+ 
 }
 .scrollTop.active {
   bottom: 40px;
@@ -177,12 +175,13 @@ nav {
   height: 100%;
   display: flex;
   align-items: center;
-  
+  position: relative;
+  top: 25%;
   }
 .hero-img img{
   border-radius: 50%;
-  width: 27em;
-  height: 27em;
+  width: 25em;
+  height: 25em;
 
 }
 .content p{
@@ -192,6 +191,43 @@ nav {
   width: 10rem;
   justify-content: space-around;
   font-size: 2.5rem;
+}
+.content{
+  position: relative;
+  top: 45%;
+}
+
+@media screen and (max-width:991px){
+  .hero-img{
+    top: 10%;
+    left: -5%;
+  }
+  
+  .hero-img img{
+    width: 18em;
+    height: 18em;
+  }
+  .hero-container{
+    margin-left: 3rem;
+  }
+  .content p{
+    font-size: 1.7rem;
+  }
+  .content h3{
+    font-size: 1.2rem;
+  }
+  .content h2{
+    font-size: 1.4rem;
+  }
+  .content{
+    position: relative;
+    margin-top: 2.5rem;
+    left: -10%;
+  }
+  .social-links li i{
+    font-size: 2rem;
+  }
+  
 }
 
 
@@ -216,7 +252,6 @@ nav {
 .about-data {
   background-color: rgb(255, 183, 49);
 }
-
 @media screen and (max-width: 576px) {
   #about-me .container {
     width: 96vw;
@@ -241,7 +276,7 @@ nav {
 }
 #info button {
   text-align: center;
-
+  margin-bottom: 2rem;
   border: 2px solid rgb(40, 45, 41);
   font-weight: bold;
   background-color: rgb(226, 226, 226);
@@ -250,6 +285,7 @@ nav {
   left: 50%;
   transform: translate(-50%, 0);
 }
+
 
 /*   ====================================      SKILLS        =========================================          */
 #skills-header{
@@ -278,9 +314,11 @@ nav {
 .content-box{
   height: 20rem;
   width: 22rem;
-  margin: 2rem -2rem;
+  margin: 2rem 1rem;
   border:2px solid black ;
   background-color: rgb(255, 183, 49);
+  border-radius: 13px;
+ 
 }
 #inner-skills .container-fluid h3{
   text-align: center;
@@ -292,23 +330,26 @@ nav {
 }
 .picons{
   position: relative;
-  left: 30%;
   font-size: 2rem;
-  
+  left: 20%;
 }
 .content-box .card-body{
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+ text-align: center;
+ align-self: center;
 }
-.content-box .card-body table p{
-  font-size: 1rem;
-  font-weight: bold;
+.learning , .technology , .learning-sports{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 30%;
+ 
 }
-.content-box .card-body table{
-  margin-left: 1.8rem;
-}
+
+
+
 
 /*  =======================================      CAROUSEL FOR THE BLOGS     =====================================   */
 
@@ -458,6 +499,18 @@ nav {
   #blogs {
     height: 41rem;
   }
+  .cardo , .carde {
+    width: 275px;
+    height: 350px;
+  }
+  .imgbx {
+    width: 275px;
+    height: 250px;
+  }
+  .imgbx img {
+    width: 275px;
+    height: 250px;
+  }
 }
 
 
@@ -465,41 +518,28 @@ nav {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-#portfolio .container .section-title{
-  padding: 1rem 0;
+#outer-portfolio .container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 20vh;
 }
-
+#outer-portfolio .container h2{
+  text-align: center;
+}
+#outer-portfolio .container p{
+  text-align: center;
+}
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
 
-.portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 0 35px 0;
-  list-style: none;
-  text-align: center;
+.inner-portfolio{
+  border-bottom: 3px solid rgb(255, 183, 49);
+  border-width: 2px;
+  padding-bottom: 6px;
 }
 
-.portfolio #portfolio-flters li {
-  cursor: pointer;
-  margin: 0 15px 15px 0;
-  display: inline-block;
-  padding: 5px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
-  color: #212529;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-  color: #eb5d1e;
-}
-
-.portfolio #portfolio-flters li:last-child {
-  margin: 0;
-}
 
 .portfolio .portfolio-wrap {
   transition: 0.3s;
@@ -515,7 +555,7 @@ nav {
   position: absolute;
   left: 100%;
   right: 0;
-  top: 0;
+  top: 7px;
   bottom: 0;
   transition: all ease-in-out 0.3s;
   z-index: 2;
@@ -604,6 +644,24 @@ nav {
 /*--------------------------------------------------------------
 # Contact Us
 --------------------------------------------------------------*/
+#outer-contacts .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+}
+#outer-contacts{
+  background-color: rgb(105, 105, 105);
+}
+.inner-contacts h2,.inner-contacts p{
+  text-align: center;
+}
+.inner-contacts{
+  border-bottom: 3px solid rgb(255, 183, 49);
+  border-width: 2px;
+  padding-bottom: 6px;
+}
+
 #contact{
   background-color: rgb(105, 105, 105);
   padding-bottom: 3rem;

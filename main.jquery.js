@@ -19,3 +19,13 @@ if ($('.typed').length) {
     easing: "ease-in-out"
   });
 
+
+  //       tilt js 
+  VanillaTilt.init(document.querySelector(".content-box"), {
+		max: 40,
+		speed: 100
+	});
+	
+	//It also supports NodeList
+	VanillaTilt.init(document.querySelectorAll(".content-box"));
+
