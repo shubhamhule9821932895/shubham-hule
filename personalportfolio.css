@@ -340,6 +340,7 @@ nav {
   flex-wrap: wrap;
   text-align: center;
   align-self: center;
+ 
 }
 .learning,
 .technology,
@@ -347,6 +348,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   flex-basis: 30%;
+  
 }
 
 /*  =======================================      CAROUSEL FOR THE BLOGS     =====================================   */
