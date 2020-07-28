@@ -1,3 +1,9 @@
+//js sectioon for loader//
+var overlay = document.getElementById("overlay");
+window.addEventListener("load", function () {
+  overlay.style.display = "none";
+});
+
 var navSlide = function () {
   let burger = document.querySelector(".burger");
   let nav = document.querySelector(".nav-links");
@@ -21,6 +27,7 @@ var navSlide = function () {
 };
 
 navSlide();
+
 //blogs carousel =========================================================================================
 
 var swiper = new Swiper(".swiper-container", {
